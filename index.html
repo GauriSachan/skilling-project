@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Next-Gen Coder Platform</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Inter', sans-serif;
+      background: linear-gradient(135deg, #0f0c29, #302b63, #24243e);
+      color: white;
+      overflow-x: hidden;
+    }
+
+    nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1rem 2rem;
+      backdrop-filter: blur(10px);
+      background-color: rgba(0, 0, 0, 0.4);
+      position: sticky;
+      top: 0;
+      z-index: 999;
+    }
+
+    nav a {
+      color: white;
+      margin: 0 1rem;
+      text-decoration: none;
+      font-weight: 600;
+    }
+
+    .hero {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 6rem 2rem;
+      background: radial-gradient(circle at top left, #33ccff, #000);
+    }
+
+    .hero h1 {
+      font-size: 3rem;
+      font-weight: 800;
+      margin-bottom: 1rem;
+    }
+
+    .hero p {
+      font-size: 1.25rem;
+      max-width: 700px;
+    }
+
+    .section {
+      padding: 4rem 2rem;
+      max-width: 1200px;
+      margin: auto;
+    }
+
+    .section h2 {
+      font-size: 2rem;
+      margin-bottom: 1rem;
+      border-left: 5px solid #00f7ff;
+      padding-left: 1rem;
+    }
+
+    .feature-card {
+      background: #1a1a2e;
+      padding: 1.5rem;
+      border-radius: 12px;
+      margin-bottom: 1.5rem;
+      box-shadow: 0 4px 30px rgba(0, 255, 255, 0.1);
+    }
+
+    .feature-card h3 {
+      color: #00f7ff;
+      margin-bottom: 0.5rem;
+    }
+
+    .feature-card p {
+      color: #ddd;
+    }
+
+    footer {
+      text-align: center;
+      padding: 2rem;
+      background: #111;
+      color: #aaa;
+    }
+  </style>
+</head>
+<body>
+  <nav>
+    <div class="logo"><strong>NextGenCoders</strong></div>
+    <div>
+      <a href="#features">Features</a>
+      <a href="#careers">Careers</a>
+      <a href="#community">Community</a>
+      <a href="#login">Login</a>
+    </div>
+  </nav>
+
+  <section class="hero">
+    <h1>Train With AI. Think Beyond It.</h1>
+    <p>Empowering coders to collaborate with AI, master optimization, and shape the future of tech.</p>
+  </section>
+
+  <section class="section" id="features">
+    <h2>🔥 Advanced Features</h2>
+
+    <a href="ai-doesn't-know-everything.html" style="text-decoration: none; color: inherit;">
+        <div class="feature-card">
+          <h3>1. "AI Doesn’t Know Everything" Mode</h3>
+          <p>Users spot AI mistakes in code to strengthen validation and critical thinking.</p>
+        </div>
+      </a>
+      
+
+    <div class="feature-card">
+      <h3>2. No-Code to Pro-Code</h3>
+      <p>Transition from drag-and-drop to full-stack development with AI assistance.</p>
+    </div>
+
+    <div class="feature-card">
+      <h3>3. AI-Generated Code, Human Optimization</h3>
+      <p>Optimize slow, AI-written code for performance and security, and climb the leaderboard.</p>
+    </div>
+
+    <div class="feature-card">
+      <h3>4. Reverse Engineering & Code Forensics</h3>
+      <p>Crack AI-obfuscated code and improve your cybersecurity skills.</p>
+    </div>
+  </section>
+
+  <footer>
+    <p>© 2025 NextGen Coders. Built for the future. Made with 💙</p>
+  </footer>
+</body>
+</html>

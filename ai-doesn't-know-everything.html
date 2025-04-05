@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AI Doesn’t Know Everything - Info</title>
+  <style>
+    body {
+      background-color: #101820;
+      color: #e0f7fa;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      padding: 2rem;
+    }
+    h1 {
+      color: #00e5ff;
+      font-size: 2rem;
+    }
+    ul {
+      list-style-type: '🔹';
+      padding-left: 1.5rem;
+    }
+    li {
+      margin: 1rem 0;
+      font-size: 1.1rem;
+    }
+    .highlight {
+      font-style: italic;
+      color: #80d8ff;
+    }
+
+    /* Code Console Styles */
+    .console {
+      background-color: #1a1a1a;
+      border: 1px solid #333;
+      border-radius: 8px;
+      padding: 1rem;
+      margin-top: 3rem;
+    }
+    textarea {
+      width: 100%;
+      height: 200px;
+      background-color: #0f0f0f;
+      color: #00ffae;
+      font-family: monospace;
+      padding: 1rem;
+      border-radius: 6px;
+      border: none;
+      resize: vertical;
+    }
+    button {
+      margin-top: 1rem;
+      padding: 0.6rem 1.2rem;
+      background-color: #00e5ff;
+      border: none;
+      border-radius: 6px;
+      color: #101820;
+      font-weight: bold;
+      cursor: pointer;
+    }
+    pre {
+      margin-top: 1rem;
+      background-color: #000;
+      color: #80ffea;
+      padding: 1rem;
+      border-radius: 6px;
+      overflow-x: auto;
+    }
+  </style>
+</head>
+<body>
+  <h1>💡 <span class="highlight">Users must recognize AI mistakes & limitations</span></h1>
+  <ul>
+    <li>AI gives <span class="highlight">partially incorrect code or explanations</span> — users must spot errors.</li>
+    <li>Trains coders to <span class="highlight">validate AI outputs instead of blindly trusting them</span>.</li>
+    <li>Real-world impact: Many AI-generated code solutions <span class="highlight">introduce security flaws</span> — this prevents that!</li>
+  </ul>
+
+  <div class="console">
+    <h2>🧪 Try it Yourself: Spot & Fix AI Mistakes</h2>
+    <textarea id="codeInput">// Example: Fix this buggy code\nfunction add(a, b) {\n  return a - b; // should be a + b\n}</textarea>
+    <button onclick="runCode()">Run Code</button>
+    <pre id="output">Output will appear here...</pre>
+  </div>
+
+  <script>
+    function runCode() {
+      const code = document.getElementById("codeInput").value;
+      const output = document.getElementById("output");
+      try {
+        const result = eval(code + '\nadd(2, 3);');
+        output.textContent = "✅ Output: " + result;
+      } catch (err) {
+        output.textContent = "❌ Error: " + err.message;
+      }
+    }
+  </script>
+</body>
+</html>

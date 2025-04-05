@@ -1,0 +1,126 @@
+body {
+    margin: 0;
+    font-family: 'Inter', sans-serif;
+    background: linear-gradient(to bottom right, #000000, #0f5132);
+    color: #e0e0e0;
+  }
+  
+  a {
+    text-decoration: none;
+    color: inherit;
+  }
+  
+  /* Navbar */
+  .navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 40px;
+    background-color: #000;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+  }
+  
+  .logo {
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: #fff;
+  }
+  .logo span {
+    color: #00ffae;
+  }
+  
+  .navbar ul {
+    list-style: none;
+    display: flex;
+    gap: 25px;
+  }
+  .navbar ul li a {
+    font-weight: 500;
+    color: #ccc;
+  }
+  
+  .join-btn {
+    background: #00ffae;
+    color: #000;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 6px;
+    font-weight: 600;
+  }
+  
+  /* Hero Section */
+  .hero {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 60px 40px;
+    flex-wrap: wrap;
+  }
+  .hero-text {
+    max-width: 50%;
+  }
+  .hero-text h1 {
+    font-size: 3rem;
+    margin-bottom: 20px;
+    color: #ffffff;
+  }
+  .hero-text p {
+    font-size: 1.2rem;
+    color: #ccc;
+  }
+  .cta {
+    background: #00ffae;
+    color: #000;
+    padding: 12px 28px;
+    font-weight: bold;
+    border: none;
+    border-radius: 6px;
+    margin-top: 20px;
+  }
+  .hero-img img {
+    border-radius: 12px;
+    max-width: 100%;
+    box-shadow: 0 0 15px #00ffae55;
+  }
+  
+  /* Features */
+  .features {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 30px;
+    padding: 60px 40px;
+  }
+  
+  .feature-card {
+    background: #111;
+    border-radius: 12px;
+    padding: 25px;
+    text-align: center;
+    box-shadow: 0 0 10px #00ffae22;
+    transition: transform 0.3s ease;
+  }
+  .feature-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 0 20px #00ffae55;
+  }
+  .feature-card img {
+    width: 48px;
+    margin-bottom: 10px;
+  }
+  .feature-card h3 {
+    color: #00ffae;
+    margin-bottom: 8px;
+  }
+  
+  /* Footer */
+  footer {
+    background: #000;
+    text-align: center;
+    padding: 20px;
+    font-size: 0.9rem;
+    color: #00ffae;
+  }
+  
+  
