@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>AI Optimization Challenge</title>
+  <style>
+    body {
+      background-color: #121212;
+      color: #e0f7fa;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      padding: 2rem;
+    }
+
+    h1 {
+      color: #00e5ff;
+      font-size: 2rem;
+    }
+
+    ul {
+      list-style-type: '🔹';
+      padding-left: 1.5rem;
+    }
+
+    li {
+      margin: 1rem 0;
+      font-size: 1.1rem;
+    }
+
+    .highlight {
+      font-style: italic;
+      color: #80d8ff;
+    }
+
+    .code-section {
+      margin-top: 2rem;
+      background-color: #1e1e1e;
+      border: 1px solid #4dd0e1;
+      border-radius: 8px;
+      padding: 1rem;
+    }
+
+    pre {
+      background-color: #000;
+      color: #80ffea;
+      padding: 1rem;
+      border-radius: 8px;
+      overflow-x: auto;
+    }
+
+    textarea {
+      width: 100%;
+      height: 200px;
+      background-color: #1a1a1a;
+      color: #e0f7fa;
+      border: 1px solid #00e5ff;
+      border-radius: 8px;
+      padding: 0.8rem;
+      font-family: monospace;
+      font-size: 0.95rem;
+    }
+
+    button {
+      margin-top: 1rem;
+      padding: 0.6rem 1.2rem;
+      background-color: #00e5ff;
+      border: none;
+      border-radius: 6px;
+      color: #101820;
+      font-weight: bold;
+      cursor: pointer;
+    }
+
+    .feedback {
+      margin-top: 1rem;
+      background-color: #263238;
+      padding: 1rem;
+      border-radius: 6px;
+      color: #a7ffeb;
+    }
+  </style>
+</head>
+<body>
+  <h1>💡 <span class="highlight">Master debugging & optimization — skills AI struggles with!</span></h1>
+  <ul>
+    <li>AI writes a <span class="highlight">basic working solution</span>, but it’s slow or inefficient.</li>
+    <li>Users must <span class="highlight">optimize it for performance, memory, and security</span>.</li>
+    <li><span class="highlight">Leaderboard ranks</span> users based on how well they optimize AI-generated solutions.</li>
+  </ul>
+
+  <div class="code-section">
+    <h2>🤖 AI's Original Code (Inefficient)</h2>
+    <pre><code>def sum_of_squares(n):
+    result = 0
+    for i in range(n):
+        result += i * i
+    return result</code></pre>
+
+    <h3>🚀 Your Optimized Version</h3>
+    <textarea id="optimizedCode" placeholder="Write a more efficient version here..."></textarea>
+    <button onclick="submitOptimization()">Submit Optimization</button>
+
+    <div class="feedback" id="feedback" style="display: none;">
+      ✅ Optimization submitted! A reviewer will analyze performance and rank you soon.
+    </div>
+  </div>
+
+  <script>
+    function submitOptimization() {
+      const code = document.getElementById('optimizedCode').value.trim();
+      if (code) {
+        document.getElementById('feedback').style.display = 'block';
+      }
+    }
+  </script>
+</body>
+</html>

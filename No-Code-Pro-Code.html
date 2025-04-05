@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>No-Code to Pro-Code</title>
+  <style>
+    body {
+      background-color: #0e1a23;
+      color: #e0f7fa;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      padding: 2rem;
+    }
+
+    h1 {
+      color: #00e5ff;
+      font-size: 2rem;
+    }
+
+    ul {
+      list-style-type: '🔹';
+      padding-left: 1.5rem;
+    }
+
+    li {
+      margin: 1rem 0;
+      font-size: 1.1rem;
+    }
+
+    .highlight {
+      font-style: italic;
+      color: #80d8ff;
+    }
+
+    .builder-area {
+      margin-top: 3rem;
+      background-color: #1b2b34;
+      border-radius: 10px;
+      padding: 1.5rem;
+      border: 1px solid #4dd0e1;
+    }
+
+    .drag-zone {
+      display: flex;
+      gap: 1rem;
+      margin-top: 1rem;
+      flex-wrap: wrap;
+    }
+
+    .draggable {
+      padding: 0.7rem 1rem;
+      background-color: #263238;
+      color: #00e5ff;
+      border: 1px dashed #00e5ff;
+      border-radius: 6px;
+      cursor: grab;
+      user-select: none;
+    }
+
+    #codeOutput {
+      background-color: #000;
+      color: #80ffea;
+      padding: 1rem;
+      border-radius: 8px;
+      margin-top: 2rem;
+      white-space: pre-wrap;
+    }
+
+    button {
+      margin-top: 1rem;
+      padding: 0.6rem 1.2rem;
+      background-color: #00e5ff;
+      border: none;
+      border-radius: 6px;
+      color: #101820;
+      font-weight: bold;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+  <h1>💡 <span class="highlight">No-Code to Pro-Code: AI-Assisted Low-Code Development</span></h1>
+  <ul>
+    <li>AI converts <span class="highlight">drag-and-drop UI designs into working code</span>.</li>
+    <li>Users start with <span class="highlight">low-code tools</span> and gradually move to <span class="highlight">writing full applications</span>.</li>
+    <li>Teaches <span class="highlight">backend logic, APIs, and software engineering fundamentals</span>.</li>
+  </ul>
+
+  <div class="builder-area">
+    <h2>🧩 Drag UI Blocks Below</h2>
+    <div class="drag-zone" id="dragZone">
+      <div class="draggable" draggable="true" data-html="<input type='text' placeholder='Enter text' />">Text Field</div>
+      <div class="draggable" draggable="true" data-html="<button>Click Me</button>">Button</div>
+      <div class="draggable" draggable="true" data-html="<label>Email:</label>">Label</div>
+    </div>
+
+    <button onclick="generateCode()">🧠 Generate HTML Code</button>
+    <div id="codeOutput">Generated code will appear here...</div>
+  </div>
+
+  <script>
+    let generatedHTML = [];
+
+    document.querySelectorAll('.draggable').forEach(elem => {
+      elem.addEventListener('dragstart', (e) => {
+        e.dataTransfer.setData("text/plain", elem.getAttribute("data-html"));
+      });
+    });
+
+    const dragZone = document.getElementById('dragZone');
+    dragZone.addEventListener('dragover', e => e.preventDefault());
+
+    dragZone.addEventListener('drop', e => {
+      e.preventDefault();
+      const htmlBlock = e.dataTransfer.getData("text/plain");
+      generatedHTML.push(htmlBlock);
+      alert('Block added to builder!');
+    });
+
+    function generateCode() {
+      document.getElementById('codeOutput').textContent = generatedHTML.join("\n");
+    }
+  </script>
+</body>
+</html>

@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Reverse Engineering Challenge</title>
+  <style>
+    body {
+      background-color: #121212;
+      color: #e0f7fa;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      padding: 2rem;
+    }
+
+    h1 {
+      color: #00e5ff;
+      font-size: 2rem;
+    }
+
+    ul {
+      list-style-type: '🔹';
+      padding-left: 1.5rem;
+    }
+
+    li {
+      margin: 1rem 0;
+      font-size: 1.1rem;
+    }
+
+    .highlight {
+      font-style: italic;
+      color: #80d8ff;
+    }
+
+    .code-box, .answer-box {
+      background-color: #1e1e1e;
+      border: 1px solid #4dd0e1;
+      border-radius: 8px;
+      padding: 1rem;
+      margin-top: 1.5rem;
+    }
+
+    pre {
+      background-color: #000;
+      color: #80ffea;
+      padding: 1rem;
+      border-radius: 8px;
+      overflow-x: auto;
+    }
+
+    textarea {
+      width: 100%;
+      height: 150px;
+      background-color: #1a1a1a;
+      color: #e0f7fa;
+      border: 1px solid #00e5ff;
+      border-radius: 6px;
+      padding: 0.8rem;
+      font-family: monospace;
+      font-size: 0.95rem;
+      margin-top: 0.5rem;
+    }
+
+    button {
+      margin-top: 1rem;
+      padding: 0.6rem 1.2rem;
+      background-color: #00e5ff;
+      border: none;
+      border-radius: 6px;
+      color: #101820;
+      font-weight: bold;
+      cursor: pointer;
+    }
+
+    .feedback {
+      display: none;
+      margin-top: 1rem;
+      background-color: #263238;
+      padding: 1rem;
+      border-radius: 6px;
+      color: #a7ffeb;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>💡 <span class="highlight">Train coders to understand & analyze AI-generated code</span></h1>
+  <ul>
+    <li>AI generates <span class="highlight">obfuscated or unclear code</span> — users must <strong>reverse-engineer it</strong>.</li>
+    <li>Simulates <span class="highlight">real-world debugging, cybersecurity, and ethical hacking scenarios</span>.</li>
+    <li>Helps users understand <span class="highlight">how AI-generated code can be exploited</span>.</li>
+  </ul>
+
+  <div class="code-box">
+    <h2>🧩 Obfuscated Code</h2>
+    <pre><code>def x(y):
+  r = 0
+  for i in range(len(y)):
+    r ^= ord(y[i])
+  return r
+
+print(x("p@ssw0rd"))</code></pre>
+  </div>
+
+  <div class="answer-box">
+    <h3>🧠 What does this code do?</h3>
+    <p>Write your interpretation below (What is the code trying to do?):</p>
+    <textarea id="reverseAnswer" placeholder="Explain what the code is doing..."></textarea>
+    <button onclick="submitAnalysis()">Submit Analysis</button>
+    <div class="feedback" id="feedbackBox">
+      ✅ Analysis submitted! You’re now one step closer to becoming a code forensics expert. 🔍
+    </div>
+  </div>
+
+  <script>
+    function submitAnalysis() {
+      const ans = document.getElementById('reverseAnswer').value.trim();
+      if (ans) {
+        document.getElementById('feedbackBox').style.display = 'block';
+      }
+    }
+  </script>
+
+</body>
+</html>
