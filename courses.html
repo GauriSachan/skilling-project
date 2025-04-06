@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>SkillSaarthi | Courses</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background: linear-gradient(to right, #0f0f0f, #003300);
+      color: #f5f5f5;
+    }
+
+    header {
+      text-align: center;
+      padding: 2rem 1rem;
+      background: #000000dd;
+      border-bottom: 2px solid #00ff99;
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: 2.5rem;
+      color: #00ff99;
+    }
+
+    .grid {
+      column-count: 3;
+      column-gap: 1rem;
+      padding: 2rem;
+    }
+
+    .card {
+      background-color: #1a1a1a;
+      border-radius: 8px;
+      margin-bottom: 1rem;
+      display: inline-block;
+      width: 100%;
+      box-shadow: 0 0 10px rgba(0,255,128,0.1);
+      transition: transform 0.2s ease;
+    }
+
+    .card:hover {
+      transform: translateY(-5px);
+    }
+
+    .card iframe {
+      width: 100%;
+      border: none;
+      border-top-left-radius: 8px;
+      border-top-right-radius: 8px;
+      height: 200px;
+    }
+
+    .card .info {
+      padding: 0.8rem;
+    }
+
+    .info h3 {
+      margin: 0 0 0.5rem;
+      font-size: 1.1rem;
+      color: #00ff99;
+    }
+
+    .info p {
+      font-size: 0.9rem;
+      color: #cccccc;
+    }
+
+    @media screen and (max-width: 1000px) {
+      .grid {
+        column-count: 2;
+      }
+    }
+
+    @media screen and (max-width: 600px) {
+      .grid {
+        column-count: 1;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>📚 Explore Courses</h1>
+    <p>Dive into hand-picked video tutorials shared by our community.</p>
+  </header>
+
+  <div class="grid">
+    <div class="card">
+      <iframe src="https://www.youtube.com/embed/Vi9bxu-M-ag" allowfullscreen></iframe>
+      <div class="info">
+        <h3>Intro to HTML</h3>
+        <p>Perfect for beginners learning structure of webpages.</p>
+      </div>
+    </div>
+
+    <div class="card">
+      <iframe src="https://www.youtube.com/embed/pQN-pnXPaVg" allowfullscreen></iframe>
+      <div class="info">
+        <h3>CSS Basics</h3>
+        <p>Learn to style websites with confidence.</p>
+      </div>
+    </div>
+
+    <div class="card">
+      <iframe src="https://www.youtube.com/embed/hdI2bqOjy3c" allowfullscreen></iframe>
+      <div class="info">
+        <h3>JavaScript Crash Course</h3>
+        <p>Interactive web pages start here.</p>
+      </div>
+    </div>
+
+    <div class="card">
+      <iframe src="https://www.youtube.com/embed/UB1O30fR-EE" allowfullscreen></iframe>
+      <div class="info">
+        <h3>Responsive Design</h3>
+        <p>Make your website look amazing on all devices.</p>
+      </div>
+    </div>
+
+    <div class="card">
+      <iframe src="https://www.youtube.com/embed/W6NZfCO5SIk" allowfullscreen></iframe>
+      <div class="info">
+        <h3>Modern JavaScript</h3>
+        <p>Deep dive into ES6+ features for efficient coding.</p>
+      </div>
+    </div>
+  </div>
+  
+
+</body>
+</html>
