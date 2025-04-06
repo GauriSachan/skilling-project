@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Next-Gen Coder Platform</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+  
+
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Inter', sans-serif;
+      background: linear-gradient(135deg, #0f0c29, #302b63, #24243e);
+      color: white;
+      overflow-x: hidden;
+    }
+
+    nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1rem 2rem;
+      backdrop-filter: blur(10px);
+      background-color: rgba(0, 0, 0, 0.4);
+      position: sticky;
+      top: 0;
+      z-index: 999;
+    }
+
+    nav a {
+      color: white;
+      margin: 0 1rem;
+      text-decoration: none;
+      font-weight: 600;
+    }
+
+    .hero {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 6rem 2rem;
+      background: radial-gradient(circle at top left, #33ccff, #000);
+    }
+
+    .hero h1 {
+      font-size: 3rem;
+      font-weight: 800;
+      margin-bottom: 1rem;
+    }
+
+    .hero p {
+      font-size: 1.25rem;
+      max-width: 700px;
+    }
+
+    .section {
+      padding: 4rem 2rem;
+      max-width: 1200px;
+      margin: auto;
+    }
+
+    .section h2 {
+      font-size: 2rem;
+      margin-bottom: 1rem;
+      border-left: 5px solid #00f7ff;
+      padding-left: 1rem;
+    }
+
+    .feature-card {
+      background: #1a1a2e;
+      padding: 1.5rem;
+      border-radius: 12px;
+      margin-bottom: 1.5rem;
+      box-shadow: 0 4px 30px rgba(0, 255, 255, 0.1);
+    }
+
+    .feature-card h3 {
+      color: #00f7ff;
+      margin-bottom: 0.5rem;
+    }
+
+    .feature-card p {
+      color: #ddd;
+    }
+
+    footer {
+      text-align: center;
+      padding: 2rem;
+      background: #111;
+      color: #aaa;
+    }
+  </style>
+</head>
+<body>
+  <nav>
+    <div class="logo"><strong>NextGenCoders</strong></div>
+    <div>
+      <a href="#features">Features</a>
+      <a href="#careers">Careers</a>
+      <a href="#community">Community</a>
+      <a href="#login">Login</a>
+    </div>
+  </nav>
+
+  <section class="hero">
+    <h1>Train With AI. Think Beyond It.</h1>
+    <p>Empowering coders to collaborate with AI, master optimization, and shape the future of tech.</p>
+  </section>
+
+  <section class="section" id="features">
+    <h2>🔥 Advanced Features</h2>
+
+    <a href="ai-doesn't-know-everything.html" style="text-decoration: none; color: inherit;">
+        <div class="feature-card">
+          <h3>1. "AI Doesn’t Know Everything" Mode</h3>
+          <p>Users spot AI mistakes in code to strengthen validation and critical thinking.</p>
+        </div>
+      </a>
+    
+      <a href="No-Code-Pro-Code.html" style="text-decoration: none; color: inherit;">
+        <div class="feature-card">
+            <h3>2. No-Code to Pro-Code</h3>
+            <p>Transition from drag-and-drop to full-stack development with AI assistance.</p>
+        </div>
+      </a>
+      <a href="human-optimization.html" style="text-decoration: none; color: inherit;">
+        <div class="feature-card">
+            <h3>3. AI-Generated Code, Human Optimization</h3>
+      <p>Optimize slow, AI-written code for performance and security, and climb the leaderboard.</p>
+        </div>
+      </a>
+      <a href="reverse-engineering.html" style="text-decoration: none; color: inherit;">
+        <div class="feature-card">
+            <h3>4. Reverse Engineering & Code Forensics</h3>
+      <p>Crack AI-obfuscated code and improve your cybersecurity skills.</p>
+        </div>
+      </a>
+    
+  <footer>
+    <p>© 2025 NextGen Coders. Built for the future. Made with 💙</p>
+  </footer>
+
+  <!-- Chatbot Popup -->
+  <div id="chatbot-btn" style="position: fixed; bottom: 20px; right: 20px; background: #00f7ff; color: #000; border-radius: 50%; width: 60px; height: 60px; display: flex; align-items: center; justify-content: center; font-size: 30px; cursor: pointer; z-index: 9999;">💬</div>
+
+  <div id="chatbot-popup" style="position: fixed; bottom: 90px; right: 20px; width: 300px; max-height: 400px; background: #1a1a2e; border-radius: 12px; box-shadow: 0 0 20px rgba(0,255,255,0.2); overflow: hidden; display: none; flex-direction: column; z-index: 9999;">
+    <div style="background: #00f7ff; color: #000; padding: 0.75rem; font-weight: bold;">💡 Mentor Bot</div>
+    <div id="chat-log" style="flex: 1; padding: 1rem; overflow-y: auto; font-size: 14px;"></div>
+    <form id="chat-form" style="display: flex; border-top: 1px solid #444;">
+      <input type="text" id="chat-input" placeholder="Ask me something..." style="flex: 1; border: none; padding: 0.5rem; background: #0f0c29; color: white;" />
+      <button type="submit" style="border: none; background: #00f7ff; color: #000; padding: 0.5rem 1rem;">Send</button>
+    </form>
+  </div>
+
+  <script>
+    const chatbotBtn = document.getElementById("chatbot-btn");
+    const chatbotPopup = document.getElementById("chatbot-popup");
+    const chatLog = document.getElementById("chat-log");
+    const chatForm = document.getElementById("chat-form");
+    const chatInput = document.getElementById("chat-input");
+
+    chatbotBtn.addEventListener("click", () => {
+      chatbotPopup.style.display = chatbotPopup.style.display === "flex" ? "none" : "flex";
+    });
+
+    chatForm.addEventListener("submit", async (e) => {
+      e.preventDefault();
+      const message = chatInput.value.trim();
+      if (!message) return;
+
+      chatLog.innerHTML += `<div style="margin-bottom: 0.5rem;"><strong>You:</strong> ${message}</div>`;
+      chatInput.value = "";
+
+      const res = await fetch("/chatbot", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ message })
+      });
+
+      const data = await res.json();
+      chatLog.innerHTML += `<div style="margin-bottom: 1rem;"><strong>Bot:</strong> ${data.reply}</div>`;
+      chatLog.scrollTop = chatLog.scrollHeight;
+    });
+  </script>
+</body>
+</html>

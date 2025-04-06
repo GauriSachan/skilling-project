@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <%- include('partials/head') %>
+  <title>Reset Password</title>
+  <link rel="stylesheet" href="/static/style.css">
+
+</head>
+<body>
+  <div class="container">
+    <h2>Reset Password</h2>
+    <form action="/reset/<%= token %>" method="POST">
+      <input type="password" name="password" placeholder="New Password" required />
+      <button type="submit">Reset Password</button>
+    </form>
+  </div>
+</body>
+</html>

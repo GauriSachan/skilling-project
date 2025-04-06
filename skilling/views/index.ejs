@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Next-Gen Coder Platform</title>
+  <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+  <h2>Welcome, <%= user.username %> 👋</h2>
+
+  <div class="chat-container">
+    <div id="messages" class="messages"></div>
+    <form id="chat-form">
+      <input type="text" id="user-input" placeholder="Ask something..." autocomplete="off" />
+      <button type="submit">Send</button>
+    </form>
+  </div>
+
+  <script src="/chatbot.js"></script>
+</body>
+</html>

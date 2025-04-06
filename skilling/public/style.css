@@ -1,0 +1,127 @@
+/* Base setup */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Poppins", sans-serif;
+  background: linear-gradient(to right, #7f7fd5, #86a8e7, #91eae4);
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Container styling */
+.container {
+  background-color: #ffffff;
+  padding: 50px 40px;
+  border-radius: 20px;
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 420px;
+  text-align: center;
+  animation: fadeIn 0.6s ease-in-out;
+}
+
+/* Heading */
+.container h2 {
+  font-size: 30px;
+  margin-bottom: 25px;
+  color: #4a00e0;
+}
+
+/* Input fields */
+input[type="text"],
+input[type="email"],
+input[type="password"] {
+  width: 100%;
+  padding: 14px 16px;
+  margin: 12px 0;
+  border: none;
+  border-radius: 12px;
+  background: #f5f7fa;
+  box-shadow: inset 3px 3px 6px #d1d9e6, inset -3px -3px 6px #ffffff;
+  font-size: 16px;
+  transition: 0.3s ease;
+}
+
+input:focus {
+  outline: none;
+  background: #eef2f7;
+  box-shadow: 0 0 0 2px #a18cd1;
+}
+
+/* Button styling */
+button {
+  background: linear-gradient(to right, #667eea, #764ba2);
+  color: #fff;
+  border: none;
+  padding: 14px 0;
+  width: 100%;
+  border-radius: 12px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  margin-top: 20px;
+  box-shadow: 0 5px 12px rgba(102, 126, 234, 0.4);
+}
+
+button:hover {
+  background: linear-gradient(to right, #5a67d8, #6b46c1);
+  transform: scale(1.02);
+}
+
+/* Links */
+p {
+  margin-top: 20px;
+  font-size: 14px;
+  color: #333;
+}
+
+p a {
+  color: #5a67d8;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+p a:hover {
+  text-decoration: underline;
+}
+
+/* Animation */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.chat-container {
+  max-width: 500px;
+  margin: 40px auto;
+  border: 1px solid #ccc;
+  padding: 10px;
+  border-radius: 8px;
+  background: #f9f9f9;
+}
+#messages {
+  height: 300px;
+  overflow-y: auto;
+  border: 1px solid #aaa;
+  padding: 10px;
+  margin-bottom: 10px;
+  background: #fff;
+}
+#chat-form {
+  display: flex;
+}
+#user-input {
+  flex: 1;
+  padding: 8px;
+}
+#chat-form button {
+  padding: 8px 15px;
+}
