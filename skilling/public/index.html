@@ -3,7 +3,9 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Next-Gen Coder Platform</title>
+  <link rel="icon" type="image/png" href="logo.png">
+
+  <title>SkillSaarthi</title>
 
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
   
@@ -177,8 +179,12 @@
 </head>
 <body>
   <nav>
-    <div class="logo"><strong>NextGenCoders</strong></div>
+    <img src="logo.png" alt="NextGen Coders Logo" width="150" height="auto">
+
+    <div class="logo"><strong>SkillSaarthi</strong></div>
     <div>
+      <div id="google_translate_element"></div>
+
       <a href="#features">Features</a>
       <a href="careers.html">Careers</a>
       <a href="community.html">Community</a>
@@ -295,5 +301,19 @@
       chatLog.scrollTop = chatLog.scrollHeight;
     });
   </script>
+  <script type="text/javascript">
+    function googleTranslateElementInit() {
+      new google.translate.TranslateElement({
+        pageLanguage: 'en',
+        includedLanguages: 'en,hi,es,fr,ja,de,zh-CN',
+        layout: google.translate.TranslateElement.InlineLayout.SIMPLE
+      }, 'google_translate_element');
+    }
+  </script>
+  
+  <script type="text/javascript" 
+    src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit">
+  </script>
+  
 </body>
 </html>

@@ -2,6 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
+  <link rel="icon" type="image/png" href="logo.png">
   <title>Forum Submission - SkillSaarthi</title>
   <style>
     body {
@@ -99,8 +100,11 @@
 </head>
 <body>
 
+
   <section class="form-section">
     <div class="form-box">
+      <div id="google_translate_element"></div>
+
       <h1>📝 Submit a Forum Post</h1>
       <p>Connect with peers. Ask, share, grow together.</p>
 
@@ -139,6 +143,19 @@
       </form>
     </div>
   </section>
-
+  <script type="text/javascript">
+    function googleTranslateElementInit() {
+      new google.translate.TranslateElement({
+        pageLanguage: 'en',
+        includedLanguages: 'en,hi,es,fr,ja,de,zh-CN',
+        layout: google.translate.TranslateElement.InlineLayout.SIMPLE
+      }, 'google_translate_element');
+    }
+  </script>
+  
+  <script type="text/javascript" 
+    src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit">
+  </script>
+  
 </body>
 </html>

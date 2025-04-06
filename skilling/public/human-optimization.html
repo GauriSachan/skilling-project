@@ -3,6 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" type="image/png" href="logo.png">
   <title>AI Optimization Challenge</title>
   <style>
     body {
@@ -81,6 +82,8 @@
   </style>
 </head>
 <body>
+  <div id="google_translate_element"></div>
+
   <h1>💡 <span class="highlight">Master debugging & optimization — skills AI struggles with!</span></h1>
   <ul>
     <li>AI writes a <span class="highlight">basic working solution</span>, but it’s slow or inefficient.</li>
@@ -113,5 +116,19 @@
       }
     }
   </script>
+  <script type="text/javascript">
+    function googleTranslateElementInit() {
+      new google.translate.TranslateElement({
+        pageLanguage: 'en',
+        includedLanguages: 'en,hi,es,fr,ja,de,zh-CN',
+        layout: google.translate.TranslateElement.InlineLayout.SIMPLE
+      }, 'google_translate_element');
+    }
+  </script>
+  
+  <script type="text/javascript" 
+    src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit">
+  </script>
+  
 </body>
 </html>

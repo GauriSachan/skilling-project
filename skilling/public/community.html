@@ -3,6 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" type="image/png" href="logo.png">
   <title>SkillSaarthi - Community</title>
   <link rel="stylesheet" href="community.css">
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
@@ -13,6 +14,8 @@
     <nav>
       <div class="logo">SkillSaarthi</div>
       <ul>
+        <div id="google_translate_element"></div>
+
         <li><a href="index.html">Home</a></li>
         <li><a href="courses.html">Courses</a></li>
         <li><a href="mentorship.html">Mentors</a></li>
@@ -60,6 +63,19 @@
   <footer>
     <p>&copy; 2025 SkillSaarthi. All rights reserved.</p>
   </footer>
-
+  <script type="text/javascript">
+    function googleTranslateElementInit() {
+      new google.translate.TranslateElement({
+        pageLanguage: 'en',
+        includedLanguages: 'en,hi,es,fr,ja,de,zh-CN',
+        layout: google.translate.TranslateElement.InlineLayout.SIMPLE
+      }, 'google_translate_element');
+    }
+  </script>
+  
+  <script type="text/javascript" 
+    src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit">
+  </script>
+  
 </body>
 </html>
