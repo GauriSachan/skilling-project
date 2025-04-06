@@ -14,7 +14,8 @@ const app = express();
 // Middleware
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
-app.use("/static", express.static(path.join(__dirname, "public")));
+app.use("/static",express.static(path.join(__dirname, "public")));
+
 app.set("view engine", "ejs");
 
 app.use(
@@ -69,28 +70,31 @@ async function getChatResponseFromHuggingFace(userMessage) {
   }
 }
 
-// Redirect root to login
+
+// Root route should always redirect to login page
 app.get("/", (req, res) => {
   res.redirect("/login");
 });
 
-// Serve index.html only if user is authenticated
-app.get("/index", (req, res) => {
-  if (!req.session.user) return res.redirect("/login");
-  res.sendFile(path.join(__dirname, "public", "index.html"));
-});
-
-// Auth routes
-app.get("/signup", (req, res) => {
-  if (req.session.user) return res.redirect("/index");
-  res.render("signup");
-});
-
+// Serve login page
 app.get("/login", (req, res) => {
-  if (req.session.user) return res.redirect("/index");
-  res.render("login");
+  if (req.session.user) return res.redirect("/index");  // Redirect to index if already logged in
+  res.render("login");  // Show login page
 });
 
+
+// Serve signup page always
+app.get("/signup", (req, res) => {
+  res.render("signup");  // Show signup page
+});
+
+// Redirect to login if user is not authenticated (protect index page)
+app.get("/index", (req, res) => {
+  if (!req.session.user) return res.redirect("/login");  // If not logged in, redirect to login
+  res.sendFile(path.join(__dirname, "public", "index.html"));  // Serve the actual content of index.html only if logged in
+});
+
+// Forgot password route
 app.get("/forgot", (req, res) => res.render("forgot"));
 
 app.get("/reset/:token", async (req, res) => {
@@ -127,7 +131,7 @@ app.post("/signup", async (req, res) => {
     });
 
     req.session.user = user;
-    res.redirect("/index");
+    res.redirect("/index");  // After signup, redirect to index page
   } catch (e) {
     res.send("Signup error: " + e.message);
   }
@@ -142,7 +146,7 @@ app.post("/login", async (req, res) => {
     return res.send("Incorrect password.");
 
   req.session.user = user;
-  res.redirect("/index");
+  res.redirect("/index");  // After successful login, redirect to index page
 });
 
 // Logout

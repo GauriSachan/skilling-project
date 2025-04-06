@@ -125,3 +125,190 @@ p a:hover {
 #chat-form button {
   padding: 8px 15px;
 }
+
+
+/* =============================== */
+/* Careers Section - Black/Red Theme */
+/* =============================== */
+
+.careers-section {
+  background: #000;
+  color: white;
+  padding: 60px 20px;
+  text-align: center;
+}
+
+.careers-container h2 {
+  font-size: 2.5rem;
+  margin-bottom: 10px;
+}
+
+.careers-subtitle {
+  font-size: 1.2rem;
+  margin-bottom: 40px;
+  color: #ccc;
+}
+
+.careers-cards {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 25px;
+  margin-bottom: 30px;
+}
+
+.career-card {
+  background-color: #111;
+  border: 2px solid #e63946;
+  padding: 2rem;
+  border-radius: 1rem;
+  box-shadow: 0 0 20px rgba(230, 57, 70, 0.2);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  width: 280px;
+  text-align: left;
+}
+
+.career-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 0 30px rgba(230, 57, 70, 0.4);
+  background-color: #1a1a1a;
+}
+
+.career-card h3 {
+  color: #e63946;
+  margin-bottom: 1rem;
+  font-size: 1.4rem;
+}
+
+.career-card p {
+  color: #ccc;
+  font-size: 1rem;
+  line-height: 1.5;
+}
+
+.apply-btn {
+  background-color: #e63946;
+  padding: 12px 30px;
+  color: #fff;
+  font-weight: bold;
+  text-decoration: none;
+  border-radius: 25px;
+  transition: background 0.3s ease;
+  display: inline-block;
+  margin-top: 15px;
+}
+
+.apply-btn:hover {
+  background-color: #ff4f5a;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .career-card {
+    width: 90%;
+  }
+
+  .careers-container h2 {
+    font-size: 2rem;
+  }
+
+  .careers-subtitle {
+    font-size: 1rem;
+  }
+}
+.upskilling-section {
+  background: linear-gradient(to right, #ffecd2, #fcb69f);
+  padding: 60px 20px;
+  color: #1f1f1f;
+  text-align: center;
+}
+
+.upskilling-section .content-wrapper {
+  max-width: 900px;
+  margin: 0 auto;
+  animation: fadeIn 0.8s ease-in-out;
+}
+
+.upskilling-section h2 {
+  font-size: 2.6rem;
+  font-weight: 700;
+  color: #6a0572;
+  margin-bottom: 10px;
+}
+
+.upskilling-section .subtitle {
+  font-size: 1.2rem;
+  color: #333;
+  margin-bottom: 40px;
+  font-weight: 500;
+}
+
+.points {
+  text-align: left;
+  margin-top: 20px;
+}
+
+.points .point {
+  background: #fff;
+  padding: 18px 20px;
+  margin-bottom: 16px;
+  border-left: 5px solid #6a0572;
+  border-radius: 10px;
+  font-size: 1.05rem;
+  box-shadow: 0 5px 12px rgba(0,0,0,0.08);
+  transition: transform 0.3s ease;
+}
+
+.points .point:hover {
+  transform: scale(1.01);
+}
+
+.points .point strong {
+  display: block;
+  color: #6a0572;
+  margin-bottom: 6px;
+}
+
+.highlight-box {
+  background-color: #fff0f6;
+  border-left: 5px solid #d10068;
+  padding: 25px;
+  margin: 40px 0;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+  font-size: 1rem;
+  line-height: 1.6;
+  text-align: left;
+}
+
+.cta-button {
+  display: inline-block;
+  padding: 12px 25px;
+  background: #d10068;
+  color: white;
+  font-weight: 600;
+  text-decoration: none;
+  border-radius: 30px;
+  transition: background 0.3s ease, transform 0.2s ease;
+  font-size: 1rem;
+  margin-top: 25px;
+}
+
+.cta-button:hover {
+  background: #e6007e;
+  transform: scale(1.05);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .upskilling-section h2 {
+    font-size: 2rem;
+  }
+  .upskilling-section .subtitle {
+    font-size: 1rem;
+  }
+  .highlight-box,
+  .points .point {
+    font-size: 0.95rem;  /* Removed extra invisible space */
+  }
+}
