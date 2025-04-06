@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Forum Submission - SkillSaarthi</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Inter', sans-serif;
+      background: linear-gradient(135deg, #0a0a23, #001f3f);
+      color: #f0f0f0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+    }
+
+    .form-section {
+      width: 100%;
+      padding: 60px 20px;
+    }
+
+    .form-box {
+      background: rgba(10, 10, 40, 0.96);
+      border: 1px solid #00aaff3a;
+      border-radius: 20px;
+      padding: 40px 50px;
+      max-width: 600px;
+      margin: 0 auto;
+      box-shadow: 0 0 20px rgba(0, 170, 255, 0.1);
+    }
+
+    .form-box h1 {
+      font-size: 2rem;
+      color: #00aaff;
+      margin-bottom: 10px;
+      text-align: center;
+    }
+
+    .form-box p {
+      text-align: center;
+      font-size: 0.95rem;
+      color: #cccccc;
+      margin-bottom: 35px;
+    }
+
+    .forum-form .form-group {
+      margin-bottom: 20px;
+    }
+
+    .forum-form label {
+      display: block;
+      font-size: 0.95rem;
+      margin-bottom: 8px;
+      color: #ccc;
+    }
+
+    .forum-form input,
+    .forum-form textarea {
+      width: 100%;
+      padding: 12px 15px;
+      border: none;
+      border-radius: 10px;
+      background: #1a1a2e;
+      color: #f0f0f0;
+      font-size: 1rem;
+      outline: none;
+      transition: box-shadow 0.3s ease;
+    }
+
+    .forum-form input:focus,
+    .forum-form textarea:focus {
+      box-shadow: 0 0 8px #00aaff70;
+    }
+
+    .forum-form input::placeholder,
+    .forum-form textarea::placeholder {
+      color: #888;
+    }
+
+    button {
+      width: 100%;
+      padding: 14px;
+      background: #00aaff;
+      color: #000;
+      font-size: 1.1rem;
+      font-weight: bold;
+      border: none;
+      border-radius: 12px;
+      cursor: pointer;
+      transition: background 0.3s ease, transform 0.2s ease;
+    }
+
+    button:hover {
+      background: #0090dd;
+      transform: scale(1.03);
+    }
+  </style>
+</head>
+<body>
+
+  <section class="form-section">
+    <div class="form-box">
+      <h1>📝 Submit a Forum Post</h1>
+      <p>Connect with peers. Ask, share, grow together.</p>
+
+      <form action="#" method="POST" class="forum-form">
+        <div class="form-group">
+          <label for="name">Your Name</label>
+          <input type="text" id="name" placeholder="e.g. Aisha Verma" required>
+        </div>
+
+        <div class="form-group">
+          <label for="topic">Topic Title</label>
+          <input type="text" id="topic" placeholder="e.g. How to start freelancing?" required>
+        </div>
+
+        <div class="form-group">
+          <label for="tags">Tags</label>
+          <input type="text" id="tags" placeholder="#career #frontend #freelance">
+        </div>
+
+        <div class="form-group">
+          <label for="description">Description</label>
+          <textarea id="description" rows="6" placeholder="Write your question or idea here..." required></textarea>
+        </div>
+
+        <button type="submit">🚀 Submit Post</button>
+        <script>
+            document.addEventListener("DOMContentLoaded", function () {
+              const form = document.querySelector(".forum-form");
+              form.addEventListener("submit", function (e) {
+                e.preventDefault(); // Prevent actual form submission
+                window.location.href = "index.html"; // Redirect
+              });
+            });
+          </script>
+          
+      </form>
+    </div>
+  </section>
+
+</body>
+</html>

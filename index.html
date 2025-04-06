@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Next-Gen Coder Platform</title>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
   <style>
@@ -67,13 +67,42 @@
       padding-left: 1rem;
     }
 
-    .feature-card {
-      background: #1a1a2e;
-      padding: 1.5rem;
-      border-radius: 12px;
-      margin-bottom: 1.5rem;
-      box-shadow: 0 4px 30px rgba(0, 255, 255, 0.1);
+    .hex-grid {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 2rem;
+      justify-content: center;
     }
+
+    .feature-card {
+  width: 180px;
+  height: 155px;
+  background: linear-gradient(135deg, #0ff, #00f);
+  clip-path: polygon(
+    50% 0%, 
+    93% 25%, 
+    93% 75%, 
+    50% 100%, 
+    7% 75%, 
+    7% 25%
+  );
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 1rem;
+  color: white;
+  box-shadow: 0 0 20px rgba(0, 255, 255, 0.5);
+  transition: transform 0.3s ease;
+  font-family: 'Poppins', sans-serif;
+}
+
+.feature-card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 30px rgba(0, 255, 255, 0.9);
+}
+
 
     .feature-card h3 {
       color: #00f7ff;
@@ -82,6 +111,57 @@
 
     .feature-card p {
       color: #ddd;
+    }
+
+    .fun-facts-container {
+      display: flex;
+      overflow-x: hidden;
+      margin-top: 4rem;
+      gap: -100px;
+      position: relative;
+    }
+
+    .fun-fact {
+  flex: 0 0 360px;
+  margin-left: -180px;
+  background: linear-gradient(135deg, #00c9ff, #92fe9d);
+  padding: 2rem;
+  border-radius: 16px;
+  box-shadow: 0 0 20px rgba(0, 255, 200, 0.5);
+  border: 2px dashed white;
+  position: relative;
+  z-index: 1;
+  opacity: 0;
+  animation: fadeIn 1.2s forwards;
+  font-family: 'Georgia', serif;
+  transition: all 0.5s ease;
+}
+
+.fun-fact:hover {
+  transform: translateX(100px) scale(1.05);
+  z-index: 99;
+  box-shadow: 0 0 30px rgba(0, 255, 255, 1);
+}
+
+.fun-fact h4 {
+  font-weight: 800;
+  margin: 0 0 0.75rem;
+  font-size: 1.25rem;
+  color: #001f1f;
+  letter-spacing: 0.5px;
+}
+
+.fun-fact p {
+  color: #111;
+  font-size: 1rem;
+  line-height: 1.5;
+}
+
+
+    @keyframes fadeIn {
+      to {
+        opacity: 1;
+      }
     }
 
     footer {
@@ -98,7 +178,7 @@
     <div>
       <a href="#features">Features</a>
       <a href="#careers">Careers</a>
-      <a href="#community">Community</a>
+      <a href="community.html">Community</a>
       <a href="#login">Login</a>
     </div>
   </nav>
@@ -110,33 +190,62 @@
 
   <section class="section" id="features">
     <h2>🔥 Advanced Features</h2>
+    <div class="hex-grid">
+      <a href="ai-doesn't-know-everything.html" style="text-decoration: none;">
+        <div class="feature-card">
+          <h3>1. AI Doesn’t Know Everything</h3>
+          <p>Spot AI mistakes to improve critical thinking.</p>
+        </div>
+      </a>
+      <a href="No-Code-Pro-Code.html" style="text-decoration: none;">
+        <div class="feature-card">
+          <h3>2. No-Code to Pro-Code</h3>
+          <p>From drag-and-drop to full-stack with AI.</p>
+        </div>
+      </a>
+      <a href="human-optimization.html" style="text-decoration: none;">
+        <div class="feature-card">
+          <h3>3. Human Optimization</h3>
+          <p>Make AI-generated code faster and safer.</p>
+        </div>
+      </a>
+      <a href="reverse-engineering.html" style="text-decoration: none;">
+        <div class="feature-card">
+          <h3>4. Code Forensics</h3>
+          <p>Reverse engineer AI code like a pro.</p>
+        </div>
+      </a>
+    </div>
+  </section>
 
-    <a href="ai-doesn't-know-everything.html" style="text-decoration: none; color: inherit;">
-        <div class="feature-card">
-          <h3>1. "AI Doesn’t Know Everything" Mode</h3>
-          <p>Users spot AI mistakes in code to strengthen validation and critical thinking.</p>
-        </div>
-      </a>
-    
-      <a href="No-Code-Pro-Code.html" style="text-decoration: none; color: inherit;">
-        <div class="feature-card">
-            <h3>2. No-Code to Pro-Code</h3>
-            <p>Transition from drag-and-drop to full-stack development with AI assistance.</p>
-        </div>
-      </a>
-      <a href="human-optimization.html" style="text-decoration: none; color: inherit;">
-        <div class="feature-card">
-            <h3>3. AI-Generated Code, Human Optimization</h3>
-      <p>Optimize slow, AI-written code for performance and security, and climb the leaderboard.</p>
-        </div>
-      </a>
-      <a href="reverse-engineering.html" style="text-decoration: none; color: inherit;">
-        <div class="feature-card">
-            <h3>4. Reverse Engineering & Code Forensics</h3>
-      <p>Crack AI-obfuscated code and improve your cybersecurity skills.</p>
-        </div>
-      </a>
-    
+  <section class="section">
+    <h2>💡 Fun Facts About Coding</h2>
+    <div class="fun-facts-container">
+      <div class="fun-fact">
+        <h4>Did You Know?</h4>
+        <p>The first computer programmer was Ada Lovelace in the 1800s!</p>
+      </div>
+      <div class="fun-fact">
+        <h4>Fun Fact!</h4>
+        <p>The word "bug" in programming came from a real insect found in a computer.</p>
+      </div>
+      <div class="fun-fact">
+        <h4>Cool Stat</h4>
+        <p>Over 700 programming languages exist today—each for a unique purpose.</p>
+      </div>
+      <div class="fun-fact">
+        <h4>Impressive!</h4>
+        <p>NASA still uses code written in the 1970s for some of its spacecraft.</p>
+      </div>
+      <div class="fun-fact">
+        <h4>The first computer mouse was made of wood!</h4>
+        <p>In 1964, Doug Engelbart invented the first mouse—it was a rectangular wooden shell with two metal wheels.
+
+        </p>
+      </div>
+    </div>
+  </section>
+
   <footer>
     <p>© 2025 NextGen Coders. Built for the future. Made with 💙</p>
   </footer>
